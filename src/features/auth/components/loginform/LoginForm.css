@@ -1,0 +1,404 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+.login-layout {
+    --purple: #8054d8;
+    --purple-dark: #6940bf;
+    --text: #252136;
+    --muted: #858197;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 1080px;
+    min-height: 660px;
+    margin: 40px auto;
+    overflow: hidden;
+    border: 1px solid #eae6f1;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 24px 80px rgba(44, 30, 74, 0.12);
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+}
+
+/* APARTADO IZQUIERDO */
+
+.section-brand {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 38px 42px;
+    overflow: hidden;
+    color: #ffffff;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(173, 123, 255, 0.45),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(110, 70, 205, 0.5),
+            transparent 40%
+        ),
+        linear-gradient(145deg, #241936, #34204f 55%, #21172f);
+}
+
+.section-brand::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    right: -130px;
+    bottom: 70px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 35px rgba(255, 255, 255, 0.025),
+        0 0 0 70px rgba(255, 255, 255, 0.02);
+    pointer-events: none;
+}
+
+.logo {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-family: "Manrope", sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo-icon {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #d7baff;
+}
+
+.brand-content {
+    position: relative;
+    z-index: 1;
+    margin: 45px 0;
+}
+
+.brand-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.07);
+    color: #e2d1ff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.text-presentation {
+    max-width: 420px;
+    margin: 28px 0 18px;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(34px, 3.6vw, 48px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -2px;
+}
+
+.text-presentation span {
+    display: block;
+    color: #c8a8ff;
+}
+
+.login-brand {
+    max-width: 350px;
+    margin: 0;
+    color: #d1c6df;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.brand-features {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9px;
+    margin-top: 35px;
+    color: #e7dff2;
+    font-size: 12px;
+}
+
+.feature-icon {
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 11px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.brand-footer {
+    position: relative;
+    z-index: 1;
+    color: #bcb0cf;
+    font-size: 12px;
+}
+
+/* APARTADO DERECHO */
+
+.section-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px clamp(28px, 5vw, 64px);
+    background: #ffffff;
+}
+
+.mobile-logo {
+    display: none;
+}
+
+.form-content {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.form-heading {
+    margin-bottom: 34px;
+}
+
+.welcome-label {
+    color: var(--purple);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.form-heading h2 {
+    margin: 12px 0 10px;
+    font-family: "Manrope", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -1.3px;
+}
+
+.form-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* CAMPOS DEL FORMULARIO */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-field label {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.password-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.password-label a,
+.account-links a {
+    color: var(--purple);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.password-label a:hover,
+.account-links a:hover {
+    color: var(--purple-dark);
+    text-decoration: underline;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 52px;
+    padding: 0 15px;
+    border: 1px solid #e7e3ee;
+    border-radius: 12px;
+    background: #fcfbfe;
+    color: #9690a6;
+    transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        background 180ms ease;
+}
+
+.input-wrapper:focus-within {
+    border-color: var(--purple);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(128, 84, 216, 0.1);
+}
+
+.input-wrapper input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+    font-size: 13px;
+}
+
+.input-wrapper input::placeholder {
+    color: #aaa5b7;
+}
+
+.password-toggle {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    padding: 4px;
+    border: none;
+    background: transparent;
+    color: #9690a6;
+    cursor: pointer;
+}
+
+/* BOTÓN PRINCIPAL */
+
+.login-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-height: 53px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(110deg, #9062e8, #7548ca);
+    box-shadow: 0 8px 18px rgba(117, 72, 202, 0.22);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(117, 72, 202, 0.3);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+/* ENLACES DE CUENTA */
+
+.account-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.account-links p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.activation-link {
+    text-decoration: none;
+}
+
+.form-footer {
+    max-width: 340px;
+    margin: 40px auto 0;
+    color: #a09bad;
+    font-size: 10px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* ADAPTACIÓN A PANTALLAS PEQUEÑAS */
+
+@media (max-width: 760px) {
+    .login-layout {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        min-height: auto;
+        margin: 20px auto;
+        border-radius: 20px;
+    }
+
+    .section-brand {
+        display: none;
+    }
+
+    .section-form {
+        padding: 30px 25px;
+    }
+
+    .mobile-logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 45px;
+        color: var(--purple);
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .form-heading h2 {
+        font-size: 29px;
+    }
+
+    .form-footer {
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 380px) {
+    .login-layout {
+        margin: 10px;
+    }
+
+    .section-form {
+        padding: 25px 18px;
+    }
+
+    .form-heading h2 {
+        font-size: 26px;
+    }
+}

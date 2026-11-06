@@ -1,0 +1,9 @@
+.register-page {
+    min-height: 100vh;
+    background-color: #F5F0FC;
+    padding: 40px;
+    display: grid;
+    place-items: center;
+}
+
+
